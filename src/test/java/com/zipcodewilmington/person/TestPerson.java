@@ -50,6 +50,19 @@ public class TestPerson {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void testConstructorWithHeight() {
+        // Given
+        Integer expected = 72;
+
+        // When
+        Person person = new Person(expected);
+
+        // Then
+        Integer actual = person.getHeight();
+        Assert.assertEquals(expected, actual);
+    }
+
 
     @Test
     public void testConstructorWithNameAndAge() {
@@ -94,5 +107,31 @@ public class TestPerson {
         // Then
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testConstructorWithNewFields(){
+        //Given
+        Integer expectedHeight = 72;
+        Integer expectedWeight = 200;
+        String expectedEyeColor = "Blue";
+        String expectedHairColor = "Brown";
+        String expectedGender = "Male";
+
+        //When
+        Person person = new Person(expectedHeight, expectedWeight, expectedEyeColor, expectedHairColor, expectedGender);
+
+        //Then
+        Integer actualHeight = person.getHeight();
+        Integer actualWeight = person.getWeight();
+        String actualEyeColor = person.getEyeColor();
+        String actualHairColor = person.getHairColor();
+        String actualGender = person.getGender();
+
+        Assert.assertEquals(expectedHeight, actualHeight);
+        Assert.assertEquals(expectedWeight, actualWeight);
+        Assert.assertEquals(expectedEyeColor, actualEyeColor);
+        Assert.assertEquals(expectedHairColor, actualHairColor);
+        Assert.assertEquals(expectedGender, actualGender);
     }
 }
