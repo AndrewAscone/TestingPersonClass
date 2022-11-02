@@ -50,19 +50,6 @@ public class TestPerson {
         Assert.assertEquals(expected, actual);
     }
 
-    @Test
-    public void testConstructorWithHeight() {
-        // Given
-        Integer expected = 72;
-
-        // When
-        Person person = new Person(expected);
-
-        // Then
-        Integer actual = person.getHeight();
-        Assert.assertEquals(expected, actual);
-    }
-
 
     @Test
     public void testConstructorWithNameAndAge() {
